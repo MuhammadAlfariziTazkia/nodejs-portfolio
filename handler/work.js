@@ -16,7 +16,7 @@ const getAllWorks = (req, res) => {
 
         await db.collection(WORK).find().toArray((error, result) => {
             if (error) {
-                return res.status(500).send(sendInternalServerError(CONNECTION_FAILED(error)))
+                return res.status(500).send(sendInternalServerError(TRANSACTION_FAILED(FETCH_ALL, WORK, error)))
             }
             dbCursor.close()
             return res.status(200).send(sendSuccessResponse(TRANSACTION_SUCCESS(FETCH_ALL, WORK), result))
