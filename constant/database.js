@@ -4,11 +4,13 @@ const WORK = "work"
 const SKILL = "skill"
 const CERTIFICATE = "certificate"
 const PROJECT = "project"
+const USER = "user"
 
 module.exports = {
     WORK,
     SKILL,
     CERTIFICATE,
     PROJECT,
-    DATABASE_NAME
+    DATABASE_NAME,
+    USER
 }

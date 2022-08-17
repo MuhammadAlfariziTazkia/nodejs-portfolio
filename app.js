@@ -9,8 +9,9 @@ const workRoute = require("./routes/work")
 const certificateRoute = require("./routes/certificate")
 const projectRoute = require("./routes/project")
 const skillRoute = require("./routes/skill")
+const authRoute = require("./routes/auth.js")
 
-const {WORK_BASE_PATH, CERTIFICATE_BASE_PATH, SKILL_BASE_PATH, PROJECT_BASE_PATH} = require("./constant/path")
+const {WORK_BASE_PATH, CERTIFICATE_BASE_PATH, SKILL_BASE_PATH, PROJECT_BASE_PATH, AUTH_BASE_PATH} = require("./constant/path")
 const { sendNotFoundError } = require("./response")
 
 const port = process.env.PORT
@@ -27,6 +28,7 @@ app.use(WORK_BASE_PATH, workRoute)
 app.use(CERTIFICATE_BASE_PATH, certificateRoute)
 app.use(PROJECT_BASE_PATH, projectRoute)
 app.use(SKILL_BASE_PATH, skillRoute)
+app.use(AUTH_BASE_PATH, authRoute)
 
 
 app.get("*", (req, res) => {
