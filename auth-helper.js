@@ -1,7 +1,4 @@
-const { JsonWebTokenError } = require("jsonwebtoken")
 const jsonWebToken = require("jsonwebtoken")
-const { client } = require("./database")
-const { sendUnauthorizedRequest, sendBadRequestResponse } = require("./response")
 
 const jwtExpiredSeconds = 300
 const jwtExpiredMills = jwtExpiredSeconds * 1000
